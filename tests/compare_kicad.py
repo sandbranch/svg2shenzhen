@@ -77,6 +77,8 @@ def extension_cmd(*args):
             "org.inkscape.Inkscape",
             *args,
         ]
+    # native Inkscape keeps inkex in its extensions folder
+    os.environ.setdefault("PYTHONPATH", "/usr/share/inkscape/extensions")
     return [sys.executable, *args]
 
 
