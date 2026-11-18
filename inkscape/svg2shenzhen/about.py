@@ -7,6 +7,9 @@ import inkex
 
 
 class About(inkex.EffectExtension):
+    def add_arguments(self, pars):
+        pars.add_argument("--active-tab")  # the dialog's notebook
+
     def effect(self):
         pass
 
