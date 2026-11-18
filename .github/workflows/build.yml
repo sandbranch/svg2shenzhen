@@ -17,7 +17,7 @@ jobs:
           python-version: "3.14"
       # inkex without PyGObject, which only its GUI helpers need
       - run: pip install --no-deps inkex==1.4.0
-      - run: pip install "lxml>=4.5,<6" numpy pillow pytest tinycss2 cssselect pyparsing packaging
+      - run: pip install "lxml>=4.5,<7" numpy pillow pytest tinycss2 cssselect pyparsing packaging
       - run: python -m pytest -q tests/test_units.py
 
   tracer:
