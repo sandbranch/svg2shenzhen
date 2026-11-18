@@ -25,4 +25,7 @@ Thank you to everyone who has contributed to Svg2Shenzhen.</_param>
 		</effects-menu>
 		<object-type>all</object-type>
     </effect>
+    <script>
+        <command location="inx" interpreter="python">svg2shenzhen/about.py</command>
+    </script>
 </inkscape-extension>
