@@ -5,3 +5,13 @@ include/boost/*
 *.gch
 dist/8
 dist/*
+.venv/
+__pycache__/
+*.pyc
+*.o
+tests/work/
+bitmap2component
+dist/
+bitmap2component_linux64
+inkscape/svg2shenzhen/bitmap2component_*
+inkscape/svg2shenzhen/bitmap2component.exe

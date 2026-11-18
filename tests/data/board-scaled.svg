@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The same board, user unit 0.5 mm, viewBox offset; must give the same KiCad board. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="80mm" height="60mm" viewBox="-10 -20 160 120">
+  <sodipodi:namedview id="nv" inkscape:document-units="mm"/>
+  <g inkscape:label="[fixed] BG" inkscape:groupmode="layer" sodipodi:insensitive="true" id="bg"/>
+  <g inkscape:label="Edge.Cuts" inkscape:groupmode="layer" id="edge">
+    <rect x="0" y="-10" width="140" height="100" rx="8" style="fill:none;stroke:#000;stroke-width:0.4"/>
+    <circle cx="110" cy="60" r="10" style="fill:none;stroke:#000;stroke-width:0.4"/>
+    <g transform="translate(30 60) rotate(30)">
+      <path d="M 0,0 C 10.0,-16.0 30.0,-16.0 40.0,0.0 h -10 v 8 z" style="fill:none;stroke:#000;stroke-width:0.4"/>
+    </g>
+  </g>
+  <g inkscape:label="B.Cu" inkscape:groupmode="layer" id="bcu">
+    <rect x="10" y="0" width="40" height="16" style="fill:#000"/>
+  </g>
+  <g inkscape:label="F.Cu" inkscape:groupmode="layer" id="fcu">
+    <rect x="70" y="4" width="24" height="12" style="fill:#000"/>
+    <g transform="translate(90 40) scale(1.5)"><circle cx="0" cy="0" r="6" style="fill:#000"/></g>
+    <text x="14" y="50" style="font-size:16px;font-family:sans-serif;font-weight:bold;fill:#000">PCB</text>
+  </g>
+  <g inkscape:label="F.Mask-auto" inkscape:groupmode="layer" id="fmask"/>
+  <g inkscape:label="F.SilkS" inkscape:groupmode="layer" id="fsilk">
+    <path d="M 40,70 l 12,0 l 0,12 z" style="fill:#000"/>
+  </g>
+  <g inkscape:label="Drill" inkscape:groupmode="layer" id="drill">
+    <circle cx="14" cy="80" r="1.0" style="fill:#000"/>
+    <g transform="translate(50 80) scale(2)"><circle cx="0" cy="0" r="0.8" style="fill:#000"/></g>
+    <ellipse cx="80" cy="80" rx="1.5" ry="1.5" style="fill:#000"/>
+  </g>
+</svg>

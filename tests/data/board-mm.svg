@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test board, user unit 1 mm. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="80mm" height="60mm" viewBox="0 0 80 60">
+  <sodipodi:namedview id="nv" inkscape:document-units="mm"/>
+  <g inkscape:label="[fixed] BG" inkscape:groupmode="layer" sodipodi:insensitive="true" id="bg"/>
+  <g inkscape:label="Edge.Cuts" inkscape:groupmode="layer" id="edge">
+    <rect x="5" y="5" width="70" height="50" rx="4" style="fill:none;stroke:#000;stroke-width:0.2"/>
+    <circle cx="60" cy="40" r="5" style="fill:none;stroke:#000;stroke-width:0.2"/>
+    <g transform="translate(20 40) rotate(30)">
+      <path d="M 0,0 C 5,-8 15,-8 20,0 h -5 v 4 z" style="fill:none;stroke:#000;stroke-width:0.2"/>
+    </g>
+  </g>
+  <g inkscape:label="B.Cu" inkscape:groupmode="layer" id="bcu">
+    <rect x="10" y="10" width="20" height="8" style="fill:#000"/>
+  </g>
+  <g inkscape:label="F.Cu" inkscape:groupmode="layer" id="fcu">
+    <rect x="40" y="12" width="12" height="6" style="fill:#000"/>
+    <g transform="translate(50 30) scale(1.5)"><circle cx="0" cy="0" r="3" style="fill:#000"/></g>
+    <text x="12" y="35" style="font-size:8px;font-family:sans-serif;font-weight:bold;fill:#000">PCB</text>
+  </g>
+  <g inkscape:label="F.Mask-auto" inkscape:groupmode="layer" id="fmask"/>
+  <g inkscape:label="F.SilkS" inkscape:groupmode="layer" id="fsilk">
+    <path d="M 25,45 l 6,0 l 0,6 z" style="fill:#000"/>
+  </g>
+  <g inkscape:label="Drill" inkscape:groupmode="layer" id="drill">
+    <circle cx="12" cy="50" r="0.5" style="fill:#000"/>
+    <g transform="translate(30 50) scale(2)"><circle cx="0" cy="0" r="0.4" style="fill:#000"/></g>
+    <ellipse cx="45" cy="50" rx="0.75" ry="0.75" style="fill:#000"/>
+  </g>
+</svg>

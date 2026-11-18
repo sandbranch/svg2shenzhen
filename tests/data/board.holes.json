@@ -1,0 +1,5 @@
+[
+ {"x": -28.0, "y": 20.0, "drill": 1.0, "plated": true},
+ {"x": -10.0, "y": 20.0, "drill": 1.6, "plated": true},
+ {"x": 5.0, "y": 20.0, "drill": 1.5, "plated": true}
+]

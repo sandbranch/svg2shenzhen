@@ -1,3 +1,64 @@
+# Svg2Shenzhen (continued)
+
+This is a continuation of [badgeek/svg2shenzhen](https://github.com/badgeek/svg2shenzhen),
+which its author, Budi Prakosa, discontinued in 2024 and asked to be
+forked and carried on ([#144](https://github.com/badgeek/svg2shenzhen/issues/144)).
+Thank you, Budi, for this tool and the boards people made with it.
+
+Inkscape extension for exporting layered drawings into a KiCad board or
+footprint: artwork on any copper, mask or silkscreen layer, the board
+outline on Edge.Cuts, and holes on Drill.
+
+## What changed in this fork
+
+- **Works with current Inkscape** (tested with 1.4.4). Layers were
+  rendered by several Inkscape processes at once; in current Inkscape
+  these can collide on D-Bus and render nothing, which is the likely
+  cause of the empty footprints of
+  [#142](https://github.com/badgeek/svg2shenzhen/issues/142) (seen here
+  from the command line; not reproduced in Inkscape 1.3 itself). All
+  layers are now rendered in one Inkscape run.
+- **Current KiCad files.** Boards and footprints are written in KiCad 9's
+  file format (version 20241229), which KiCad 9 and 10 open; with a
+  footprint library table, so KiCad finds the footprint.
+- **Board outline (Edge.Cuts) read properly.** Rectangles, circles,
+  ellipses and paths all count
+  ([#119](https://github.com/badgeek/svg2shenzhen/issues/119)); every
+  transform is applied, including those of groups; separate subpaths
+  stay separate (cut-outs); curves stay curves (KiCad Bezier lines) and
+  circles stay circles, so no flattening is needed
+  ([#70](https://github.com/badgeek/svg2shenzhen/issues/70),
+  [#103](https://github.com/badgeek/svg2shenzhen/issues/103)).
+- **Real millimetres everywhere.** Outline and holes no longer come out
+  at a different scale from the artwork in documents whose user unit is
+  not 1 mm ([#132](https://github.com/badgeek/svg2shenzhen/issues/132)).
+- **Holes:** circles on the Drill layer are plated holes with a copper
+  ring (0.25 mm by default, set in the dialog); circles on a new
+  Drill.NPTH layer are unplated holes
+  ([#135](https://github.com/badgeek/svg2shenzhen/issues/135)).
+- **Saved next to the drawing** by default, not in the home folder.
+- **Builds again** with current compilers
+  ([#126](https://github.com/badgeek/svg2shenzhen/issues/126)); the Linux
+  tracer is a static binary, so it also runs in the Inkscape Flatpak.
+
+## Tests
+
+- `tests/compare_kicad.py`: exports test drawings, loads the board with
+  KiCad's `kicad-cli`, plots each layer and compares it with Inkscape's
+  render of that layer (copper, mask and silkscreen within 0.2 % of the
+  pixels; outline within 0.15 mm; holes exactly where and as large as
+  drawn), and checks that the same board drawn in other units gives the
+  same KiCad board. Needs Inkscape and KiCad (Flatpaks or native).
+- `tests/test_units.py`: the geometry and KiCad writing, without
+  Inkscape or KiCad (also run on GitHub Actions).
+
+Checked with Inkscape 1.4.4 and KiCad 10.0.8, on Linux. Windows and
+macOS builds come from GitHub Actions and are not tested by hand yet.
+
+---
+
+The original README follows.
+
 # Svg2Shenzhen
 
 # Sadly this project is discontinued
